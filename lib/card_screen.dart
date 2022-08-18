@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:card_generation_site/app_assets.dart';
 import 'package:card_generation_site/card_flip_builder.dart';
 import 'package:card_generation_site/card_shape.dart';
