@@ -7,10 +7,10 @@ class CardShape extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card(
+    return Card(
       color: Colors.transparent,
-      margin: EdgeInsets.symmetric(horizontal: 25),
-      shape: RoundedRectangleBorder(
+      margin: const EdgeInsets.symmetric(horizontal: 25),
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(25.0),
           topRight: Radius.circular(25.0),
@@ -20,8 +20,8 @@ class CardShape extends StatelessWidget {
       ),
       elevation: 100,
       child: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: SizedBox.shrink(),
+        padding: const EdgeInsets.all(8.0),
+        child: Image.asset('build/web/assets/card_pic/1.svg'),
       ),
     );
   }

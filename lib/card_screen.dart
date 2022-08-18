@@ -12,9 +12,6 @@ class CardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int cardNumber = 1;
-    final pageFlipKey = GlobalKey<CardFlipBuilderState>();
-
     return Container(
       decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -33,27 +30,9 @@ class CardScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(height: 80),
-              Center(
-                heightFactor: 1.2,
-                child: CardFlipBuilder(
-                    key: pageFlipKey,
-                    frontBuilder: (_) => CardUiWidget(
-                          onFlip: pageFlipKey.currentState?.flip,
-                          assetName: AppAssets.back,
-                        ),
-                    backBuilder: (_) => CardUiWidget(
-                          onFlip: pageFlipKey.currentState?.flip,
-                          assetName:
-                              'build/web/assets/card_pic/$cardNumber.svg',
-                        ),
-                    onFlipComplete: (_) =>
-                        // cardNumber = Random().nextInt(77) + 1,
-                        {}),
-              ),
-              if (pageFlipKey.currentState?.showFrontSide == false)
-                const CardShape()
+            children: const [
+              SizedBox(height: 80),
+              Center(heightFactor: 1.2, child: CardShape())
             ],
           ),
         ),
