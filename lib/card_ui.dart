@@ -10,11 +10,21 @@ class CardUiWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List list = [
+      'build/web/assets/card_pic/1.svg',
+      'build/web/assets/card_pic/2.svg',
+      'build/web/assets/card_pic/3.svg',
+      'build/web/assets/card_pic/4.svg'
+    ]..shuffle();
+
     return GridView.builder(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         itemCount: 4,
-        itemBuilder: (context, index) => ItemTile(index),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        itemBuilder: (context, index) => ItemTile(
+              index,
+              list: list,
+            ),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             childAspectRatio: 0.62,
             crossAxisSpacing: 25,
@@ -25,9 +35,9 @@ class CardUiWidget extends StatelessWidget {
 class ItemTile extends StatelessWidget {
   final int itemNo;
 
-  const ItemTile(
-    this.itemNo,
-  );
+  final List list;
+
+  const ItemTile(this.itemNo, {super.key, required this.list});
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +67,7 @@ class ItemTile extends StatelessWidget {
             bottomLeft: Radius.circular(25.0),
           ),
           child: SvgPicture.asset(
-            'build/web/assets/card_pic/$itemNo.svg',
+            list[itemNo],
             cacheColorFilter: true,
           )),
     );
