@@ -1,4 +1,7 @@
+import 'package:card_generation_site/app_assets.dart';
 import 'package:card_generation_site/card_screen.dart';
+import 'package:card_generation_site/card_shape.dart';
+import 'package:card_generation_site/card_ui.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,8 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const CardScreen(),
       home: const CardScreen(),
+      // home: const CardShape(),
     );
   }
 }

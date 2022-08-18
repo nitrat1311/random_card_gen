@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CardShape extends StatelessWidget {
   const CardShape({
@@ -21,7 +22,10 @@ class CardShape extends StatelessWidget {
       elevation: 100,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Image.asset('build/web/assets/card_pic/1.svg'),
+        child: SvgPicture.asset(
+          'build/web/assets/card_pic/1.svg',
+          cacheColorFilter: true,
+        ),
       ),
     );
   }

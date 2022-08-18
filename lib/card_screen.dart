@@ -27,14 +27,8 @@ class CardScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
         ),
         backgroundColor: Colors.transparent,
-        body: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              SizedBox(height: 80),
-              Center(heightFactor: 1.2, child: CardShape())
-            ],
-          ),
+        body: CardUiWidget(
+          index: AppAssets.back,
         ),
       ),
     );
