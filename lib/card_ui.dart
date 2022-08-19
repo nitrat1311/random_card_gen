@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CardUiWidget extends StatelessWidget {
-  const CardUiWidget({Key? key, this.onFlip, required this.index})
-      : super(key: key);
+  const CardUiWidget({Key? key, required this.index}) : super(key: key);
 
-  final VoidCallback? onFlip;
   final String index;
 
   @override
