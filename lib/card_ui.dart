@@ -29,14 +29,11 @@ class CardUiWidget extends StatelessWidget {
 
 class ItemTile extends StatelessWidget {
   final int itemNo;
-
   final List list;
-
   const ItemTile(this.itemNo, {super.key, required this.list});
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(
-        'https://drive.google.com/uc?export=view&id=1ElabtBg9uUaZjC7U84jbNaat2SuDW4ub');
+    return Image.network(list[itemNo]);
   }
 }

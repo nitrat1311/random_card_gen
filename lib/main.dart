@@ -1,6 +1,4 @@
-import 'package:card_generation_site/app_assets.dart';
 import 'package:card_generation_site/card_screen.dart';
-import 'package:card_generation_site/card_shape.dart';
 import 'package:card_generation_site/card_ui.dart';
 import 'package:flutter/material.dart';
 
@@ -16,48 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Card Generator',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: const CardScreen(),
-      // home: const MyHomePage(
-      //   title: 'Card',
-      // ),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: CardUiWidget(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }

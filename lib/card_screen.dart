@@ -1,7 +1,4 @@
-import 'package:card_generation_site/app_assets.dart';
-import 'package:card_generation_site/card_shape.dart';
 import 'package:card_generation_site/card_ui.dart';
-
 import 'package:flutter/material.dart';
 
 class CardScreen extends StatefulWidget {
@@ -14,12 +11,8 @@ class CardScreen extends StatefulWidget {
 }
 
 class _CardScreenState extends State<CardScreen> {
-  int _counter = 0;
-
   void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+    setState(() {});
   }
 
   @override
@@ -34,7 +27,6 @@ class _CardScreenState extends State<CardScreen> {
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: _incrementCounter,
-          tooltip: 'Increment',
           child: const Icon(Icons.add),
         ),
         appBar: AppBar(
@@ -44,7 +36,7 @@ class _CardScreenState extends State<CardScreen> {
           backgroundColor: Colors.transparent,
         ),
         backgroundColor: Colors.transparent,
-        body: CardUiWidget(),
+        body: const CardUiWidget(),
       ),
     );
   }
