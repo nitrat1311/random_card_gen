@@ -55,9 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'У моей жены самая красивая попа *)',
-            ),
+            const CardUiWidget(index: AppAssets.back),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
