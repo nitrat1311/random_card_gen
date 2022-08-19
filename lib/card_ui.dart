@@ -8,7 +8,8 @@ class CardUiWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List list = [
-      'https://photos.google.com/share/AF1QipMDiQFWYMX4i0cz68RzIw-qD4fmIdI-gXNnmizkle0c1SbSXNQuroVaNzPxzq54Tg/photo/AF1QipOldylI8xc75TQvoD1pH2ZsxwQn90E3mC8k5ZXV?key=Zlc2ZnBndXlEQVpoV2tzbkdVMWF4eTRfMFFycnVB',
+      'https://drive.google.com/file/d/uc?export=view&id=1Lyv_cxcO5VCXdTZ1YWzvR3WkSVRk1Ymp',
+      'https://drive.google.com/file/d/uc?export=view&id=1ElabtBg9uUaZjC7U84jbNaat2SuDW4ub',
     ]..shuffle();
 
     return GridView.builder(
@@ -35,7 +36,6 @@ class ItemTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(
-        'https://drive.google.com/uc?export=view&id=1VdjEgb0aZl9IZa2jOzGU5_SNbmlmeiCj');
+    return Image.network(list[itemNo]);
   }
 }
