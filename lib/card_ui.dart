@@ -100,28 +100,11 @@ class CardUiWidget extends StatelessWidget {
       'https://drive.google.com/uc?export=view&id=1I5KOCG01o9O1Q15y5LCjZlkgDnpeLTLZ',
     ]..shuffle();
 
-    return GridView.builder(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        itemCount: 1,
-        itemBuilder: (context, index) => ItemTile(
-              index,
-              list: list,
-            ),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 1,
-            childAspectRatio: 0.62,
-            crossAxisSpacing: 25,
-            mainAxisSpacing: 20));
-  }
-}
-
-class ItemTile extends StatelessWidget {
-  final int itemNo;
-  final List list;
-  const ItemTile(this.itemNo, {super.key, required this.list});
-
-  @override
-  Widget build(BuildContext context) {
-    return Image.network(list[itemNo]);
+    return Center(
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        child: Image.network(list[0]),
+      ),
+    );
   }
 }
