@@ -9,10 +9,13 @@ class CardUiWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List list = [
-      'build/web/assets/card_pic/1.svg',
-      'build/web/assets/card_pic/2.svg',
-      'build/web/assets/card_pic/3.svg',
-      'build/web/assets/card_pic/4.svg'
+      'https://picsum.photos/850',
+      'https://picsum.photos/1250',
+      'https://picsum.photos/1350',
+      'https://picsum.photos/1450',
+      // 'build/web/assets/card_pic/2.svg',
+      // 'build/web/assets/card_pic/3.svg',
+      // 'build/web/assets/card_pic/4.svg'
     ]..shuffle();
 
     return GridView.builder(
@@ -64,9 +67,8 @@ class ItemTile extends StatelessWidget {
             bottomRight: Radius.circular(25.0),
             bottomLeft: Radius.circular(25.0),
           ),
-          child: SvgPicture.asset(
+          child: Image.network(
             list[itemNo],
-            cacheColorFilter: true,
           )),
     );
   }
