@@ -15,14 +15,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const CardScreen(),
-      home: const MyHomePage(
-        title: 'Card',
-      ),
+      home: const CardScreen(),
+      // home: const MyHomePage(
+      //   title: 'Card',
+      // ),
     );
   }
 }
@@ -51,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: CardUiWidget(index: AppAssets.back),
+      body: CardUiWidget(),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',

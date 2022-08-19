@@ -1,32 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CardUiWidget extends StatelessWidget {
-  const CardUiWidget({Key? key, required this.index}) : super(key: key);
-
-  final String index;
+  const CardUiWidget({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final List list = [
-      'https://picsum.photos/850',
-      'https://picsum.photos/1250',
-      'https://picsum.photos/1350',
-      'https://picsum.photos/1450',
-      // 'build/web/assets/card_pic/2.svg',
-      // 'build/web/assets/card_pic/3.svg',
-      // 'build/web/assets/card_pic/4.svg'
+      'https://photos.google.com/share/AF1QipMDiQFWYMX4i0cz68RzIw-qD4fmIdI-gXNnmizkle0c1SbSXNQuroVaNzPxzq54Tg/photo/AF1QipOldylI8xc75TQvoD1pH2ZsxwQn90E3mC8k5ZXV?key=Zlc2ZnBndXlEQVpoV2tzbkdVMWF4eTRfMFFycnVB',
     ]..shuffle();
 
     return GridView.builder(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        itemCount: 4,
+        itemCount: 1,
         itemBuilder: (context, index) => ItemTile(
               index,
               list: list,
             ),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
+            crossAxisCount: 1,
             childAspectRatio: 0.62,
             crossAxisSpacing: 25,
             mainAxisSpacing: 20));
@@ -42,34 +35,7 @@ class ItemTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.black,
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black,
-            spreadRadius: 1,
-            blurRadius: 3,
-          )
-        ],
-        border: Border.all(color: Colors.black, width: 3.0),
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(25.0),
-          topRight: Radius.circular(25.0),
-          bottomRight: Radius.circular(25.0),
-          bottomLeft: Radius.circular(25.0),
-        ),
-      ),
-      child: ClipRRect(
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(25.0),
-            topRight: Radius.circular(25.0),
-            bottomRight: Radius.circular(25.0),
-            bottomLeft: Radius.circular(25.0),
-          ),
-          child: Image.network(
-            list[itemNo],
-          )),
-    );
+    return Image.network(
+        'https://drive.google.com/uc?export=view&id=1VdjEgb0aZl9IZa2jOzGU5_SNbmlmeiCj');
   }
 }
