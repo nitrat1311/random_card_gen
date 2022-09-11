@@ -122,7 +122,7 @@ class _CardScreenState extends State<CardScreen> {
       )),
       backgroundColor: Colors.transparent,
       body: CardUiWidget(list: widget.list),
-      floatingActionButton: ElevatedButton(
+      floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
             widget.list.shuffle();
