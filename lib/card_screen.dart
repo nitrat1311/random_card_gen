@@ -130,7 +130,7 @@ class _CardScreenState extends State<CardScreen> {
         },
         child: const Icon(
           Icons.refresh,
-          size: 60,
+          size: 30,
         ),
       ),
     );
